@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html { 
+    background: url(burger-friends.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header {
+    padding: 10px;
+    background: teal;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+    width: 110px;
+}
