@@ -26,11 +26,12 @@ button {
     width: 400px;
     height: 400px;
     background-color: white;
-    opacity: 60%;
     margin-bottom: 20px;
     margin-top: 40px;
     display: block;
     margin-left: 60px;
+    background: rgb(255, 255, 255, 0.8);
+
 }
 .responsive-two-column-grid {
     display: grid;
@@ -52,3 +53,16 @@ img {
     background-color: teal;
     width: 150px;
 }
+/* @media screen and (min-width: 500px) {
+    .header {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+    .responsive-two-column-grid {
+        display: block;
+    }
+  } */
