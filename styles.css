@@ -31,7 +31,6 @@ button {
     display: block;
     margin-left: 140px;
     background: rgb(255, 255, 255, 0.8);
-
 }
 .responsive-two-column-grid {
     display: grid;
