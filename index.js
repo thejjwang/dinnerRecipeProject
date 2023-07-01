@@ -44,9 +44,13 @@ function clearColumn1(){
 function submitOwnRecipe(){
 
 }
+function clearColumn2(){
+    meal.innerText= "";
+}
 addRecipeBtn.addEventListener('click', addRecipe);
 function addRecipe(){
     clearColumn1();
+    clearColumn2();
     column2.appendChild(img);
     function createRecipeForm(){
          // create new div
