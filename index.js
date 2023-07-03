@@ -5,15 +5,14 @@ let sideArr;
 let mainArr;
 let dessertArr;
 
-fetch('http://localhost:3000')
-  .then(response => response.json())
-  .then(data => {
-    // Access data.sides, data.mainDishes, data.desserts, etc.
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-
+async function test() {
+    const response = await fetch('http://localhost:3000/db');
+    const data = await response.json();
+    sideArr = data.sides;
+    mainArr = data.mainDishes;
+    dessertArr = data.desserts;
+}
+test();
 
 const addRecipeBtn = document.getElementById('addRecipeBtn');
 const radioButtons = document.querySelectorAll('input[name="looking"]');
@@ -22,6 +21,7 @@ const img = document.getElementById('img');
 const meal = document.getElementById('meal');
 const column1 = document.getElementById('column1');
 const column2 = document.querySelector('.column:last-child');
+
 
 letsCookBtn.addEventListener('click', letsCook);
 function letsCook() {
