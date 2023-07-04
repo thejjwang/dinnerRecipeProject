@@ -135,7 +135,7 @@ function addRecipe(){
             window.location.reload();
         }
         // submit button
-        submitButton.addEventListener('click', function(event){
+        submitButton.addEventListener('click', async function(event){
             event.preventDefault();
             img.remove();
             const sideValue = sideInput.value;
@@ -144,6 +144,34 @@ function addRecipe(){
             mainArr.push(mainValue);
             const dessertValue = dessertInput.value;
             dessertArr.push(dessertValue); 
+            const updatedData = {
+                sides: sideArr,
+                mainDishes: mainArr,
+                desserts: dessertArr,
+            };
+
+            
+            try {
+                // Make a POST request to update the data in the JSON server
+                const response = await fetch('http://localhost:3000', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(updatedData)
+                });
+            
+                // Check if the request was successful
+                if (response.ok) {
+                  console.log('Data updated successfully.');
+                } else {
+                  console.error('Failed to update data.');
+                }
+              } catch (error) {
+                console.error('Error updating data:', error);
+              }
+              
+              
             meal.innerText = `The meal consists of a side of ${sideValue}, the main dish being ${mainValue}, and finally for dessert, ${dessertValue}.`
         });
     
