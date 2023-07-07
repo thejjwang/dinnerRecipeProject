@@ -18,7 +18,6 @@ const addRecipeBtn = document.getElementById('addRecipeBtn');
 const radioButtons = document.querySelectorAll('input[name="looking"]');
 const letsCookBtn = document.getElementById('letsCookBtn');
 const img = document.getElementById('img');
-const menu = "";
 const meal = document.getElementById('meal');
 const column1 = document.getElementById('column1');
 const column2 = document.querySelector('.column:last-child');
